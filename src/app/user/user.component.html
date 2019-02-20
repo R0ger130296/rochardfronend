@@ -1,0 +1,24 @@
+<h1>Usuarios registrados</h1>
+<div class="clear"></div>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Cedula</th>
+      <th>Telefono</th>
+      <th>Dirección</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of users">
+      <td>{{item.nombre}}</td>
+      <td>{{item.ci}}</td>
+      <td>{{item.telefono}}</td>
+      <td>{{item.direccion}}</td>
+      <td>
+        <img src="../../assets/edit.png" class="editIcon" (click)="edit(item)">
+        <img src="../../assets/delete.png" class="editIcon" (click)="delete(item)">
+      </td>
+    </tr>
+  </tbody>
+</table>
